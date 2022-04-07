@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<!--http://192.168.0.5:8000/live/itying.flv?sign=1553221126-44ec233ea4a517825045ad7553ac9a63-->
+		
+		<!--rtmp://192.168.0.5/live/itying?sign=1553221126-44ec233ea4a517825045ad7553ac9a63-->
+		
+		<!-- http://hostname:port/appname/stream.flv?sign=expires-HashValue -->
+		
+		<script src="https://cdn.bootcss.com/flv.js/1.4.0/flv.min.js"></script>
+		<video id="videoElement" style="width: 80%;" controls="controls"></video>
+		<script>
+		    // if (flvjs.isSupported()) {
+		    //     var videoElement = document.getElementById('videoElement');
+		    //     var flvPlayer = flvjs.createPlayer({
+		    //         type: 'flv',
+				// 				url:'http://localhost:8000/live/JYQlive.flv?sign=1649299302-28efaa43fbd297ffb6615ca3587097f3'
+		    //     });
+		    //     flvPlayer.attachMediaElement(videoElement);
+		    //     flvPlayer.load();
+		    //     flvPlayer.play();
+		    // }
+				if (flvjs.isSupported()) {
+		        var videoElement = document.getElementById('videoElement');
+		        var flvPlayer = flvjs.createPlayer({
+		            type: 'flv',
+								url:'http://172.18.23.49:8000/live/JYQlive.flv?sign=1649299509-c6c6286e23d696e508eea8c2eb9df4b2'
+		        });
+		        flvPlayer.attachMediaElement(videoElement);
+		        flvPlayer.load();
+		        flvPlayer.play();
+		    }
+		</script>
+		<!-- <script>
+			if (flvjs.isSupported()) {
+					var videoElement = document.getElementById('videoElement');
+					var flvPlayer = flvjs.createPlayer({
+							type: 'rtmp',
+				url:'http://localhost:8000/live/JYQlive.flv?sign=1649253421-42481a7982df47939c4612caf2d84c0c'
+					});
+					flvPlayer.attachMediaElement(videoElement);
+					flvPlayer.load();
+					flvPlayer.play();
+			}
+	</script> -->
+	</body>
+</html>
